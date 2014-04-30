@@ -1,0 +1,4 @@
+KanaDrill
+=========
+
+Learn the kanas
