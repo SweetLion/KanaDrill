@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="katakana_checkbox"
+        android:summary="@string/katakana_summary"
+        android:title="@string/katakana_title" />
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/kana_options"
+        android:entryValues="@array/kana_values"
+        android:key="kana_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/kana_title" />
+    
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/order_options"
+        android:entryValues="@array/order_values"
+        android:key="order_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/order_title" />
+
+</PreferenceScreen>

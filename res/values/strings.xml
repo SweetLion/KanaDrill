@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kana Drill</string>
+    <string name="action_settings">Settings</string>
+    <string name="check">Check</string>
+    <string name="hint">Input the kana!</string>
+    <string name="blank"/>
+
+</resources>
