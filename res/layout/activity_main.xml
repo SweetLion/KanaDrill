@@ -1,35 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.jorgecastillo.kanadrill.MainActivity"
-    tools:ignore="MergeRootFrame" >
-
-    <TextView
-        android:id="@+id/kanaDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/blank"
-        android:textAlignment="center"
-        android:textSize="@dimen/abc_search_view_text_min_width" />
+    android:orientation="vertical" >
 
     <Button
-        android:id="@+id/buttonOkay"
+        android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/check"
-        android:onClick="onClickButtonOkay" />
+        android:text="@string/start_button"
+        android:onClick="onClickButtonStart" />
 
-    <EditText
-        android:id="@+id/kanaInput"
+    <Button
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hint" >
-
-        <requestFocus />
-    </EditText>
+        android:text="@string/train_button"
+        android:onClick="onClickButtonTrain" />
 
 </LinearLayout>

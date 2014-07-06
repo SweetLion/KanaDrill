@@ -6,5 +6,7 @@
     <string name="check">Check</string>
     <string name="hint">Input the kana!</string>
     <string name="blank"/>
+    <string name="start_button">Start</string>
+    <string name="train_button">Train</string>
 
 </resources>

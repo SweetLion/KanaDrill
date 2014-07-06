@@ -1,66 +1,64 @@
 package com.jorgecastillo.kanadrill;
 
 import android.support.v7.app.ActionBarActivity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
+import android.widget.Button;
+import android.widget.TextView;
 
-public class MainActivity extends ActionBarActivity {
+public class GameActivity extends ActionBarActivity {
 	
+	private TextView gameText;
+	private Button button1, button2, button3, button4;
+	private int count;
+	private int upto;
+	private int[] order;
 	private SharedPreferences myPreferences;
-	private Context myContext;
-	private String textToast;
+
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_game);
 		
-		myContext = getApplicationContext();
+		gameText = (TextView) findViewById(R.id.gameText);
+		button1 = (Button) findViewById(R.id.button1);
+		button2 = (Button) findViewById(R.id.button2);
+		button3 = (Button) findViewById(R.id.button3);
+		button4 = (Button) findViewById(R.id.button4);
+		
 		myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
-		if (!myPreferences.getBoolean("setup_true", false)){
-			
-			SharedPreferences.Editor editMyPreferences = myPreferences.edit();
-			editMyPreferences.putBoolean("setup_true", true);
-			editMyPreferences.commit();
-			
-			textToast = "Setup the app";
-			Toast.makeText(myContext, textToast, Toast.LENGTH_SHORT).show();
-			
-			Intent intent = new Intent(this, SettingsActivity.class);
-			startActivity(intent);
-
-		}
 		
+		if (myPreferences.getBoolean("setup_true", false)){
+			
+			int kana_list = Integer.parseInt(myPreferences.getString("kana_list", "1"));
+            upto = CommonCode.setUpto(kana_list);
+			
+			order = new int[upto];
+			
+			CommonCode.orderRandom(upto, order);
+			
+			gameText.setText("A");
+			button1.setText("bb");
+			button2.setText("cc");
+			button3.setText("dd");
+			button4.setText("ee");
+
+			}
 	}
 
-	public void onClickButtonTrain(View view){
-	  
-		Intent intent = new Intent(this, TrainingActivity.class);
-		startActivity(intent);
-		
-	}
-	
-	public void onClickButtonStart(View view){
-		  
-		Intent intent = new Intent(this, GameActivity.class);
-		startActivity(intent);
-		
-	}
-	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+
 	}
 
 	@Override
