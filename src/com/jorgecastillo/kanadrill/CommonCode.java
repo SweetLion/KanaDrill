@@ -28,7 +28,7 @@ public class CommonCode {
 		Arrays.fill(order, -1);
 		
 		for (int i = 0; i < upto;){
-			int val = (int) Math.floor(Math.random() * upto);
+			int val = randomInt(upto);
 			if (!intExists(order, val, upto)){
 			    order[i] = val;
 			    i++;
@@ -60,5 +60,14 @@ public class CommonCode {
 		
 		return upto;
 		
+	}
+	
+	public static int randomInt(int upto){
+		
+	    int number;
+	    
+	    number = (int) Math.floor(Math.random() * upto);
+		
+	    return number;
 	}
 }
