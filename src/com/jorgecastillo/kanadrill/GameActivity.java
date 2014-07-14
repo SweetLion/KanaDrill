@@ -164,7 +164,11 @@ public class GameActivity extends ActionBarActivity {
 		          count = 0;
 		          kana = katakana.clone();
 			} else{
-				System.exit(1);
+				Intent intent = new Intent(this, StatsActivity.class);
+				intent.putExtra("Key1","This is a test");
+				startActivity(intent);
+				//The next line is to avoid an ArrayIndexOutOfBoundsException
+				count = 0;
 			}
 		}
 		

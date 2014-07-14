@@ -1100,7 +1100,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
-        public static final int action_settings=0x7f060047;
+        public static final int action_settings=0x7f060048;
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int always=0x7f06000b;
         public static final int beginning=0x7f060011;
@@ -1108,14 +1108,14 @@ containing a value of this type.
         public static final int button2=0x7f06003d;
         public static final int button3=0x7f06003f;
         public static final int button4=0x7f06003e;
-        public static final int buttonOkay=0x7f060043;
+        public static final int buttonOkay=0x7f060044;
         public static final int checkbox=0x7f06002d;
         public static final int collapseActionView=0x7f06000d;
-        public static final int container=0x7f060041;
+        public static final int container=0x7f060042;
         public static final int default_activity_button=0x7f060028;
         public static final int dialog=0x7f06000e;
-        public static final int dialog_kana=0x7f060045;
-        public static final int dialog_romanji=0x7f060046;
+        public static final int dialog_kana=0x7f060046;
+        public static final int dialog_romanji=0x7f060047;
         public static final int disableHome=0x7f060008;
         public static final int dropdown=0x7f06000f;
         public static final int edit_query=0x7f060030;
@@ -1128,8 +1128,8 @@ containing a value of this type.
         public static final int icon=0x7f06002a;
         public static final int ifRoom=0x7f06000a;
         public static final int image=0x7f060027;
-        public static final int kanaDisplay=0x7f060042;
-        public static final int kanaInput=0x7f060044;
+        public static final int kanaDisplay=0x7f060043;
+        public static final int kanaInput=0x7f060045;
         public static final int listMode=0x7f060001;
         public static final int list_item=0x7f060029;
         public static final int middle=0x7f060012;
@@ -1154,6 +1154,7 @@ containing a value of this type.
         public static final int showHome=0x7f060004;
         public static final int showTitle=0x7f060006;
         public static final int split_action_bar=0x7f06001e;
+        public static final int statsText=0x7f060041;
         public static final int submit_area=0x7f060039;
         public static final int tabMode=0x7f060002;
         public static final int title=0x7f06002b;
@@ -1214,9 +1215,10 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_game=0x7f030018;
         public static final int activity_main=0x7f030019;
-        public static final int activity_training=0x7f03001a;
-        public static final int dialog_view=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int activity_stats=0x7f03001a;
+        public static final int activity_training=0x7f03001b;
+        public static final int dialog_view=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int main=0x7f0e0000;
