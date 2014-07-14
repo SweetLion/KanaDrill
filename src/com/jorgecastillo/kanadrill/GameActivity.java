@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Arrays;
 
 public class GameActivity extends ActionBarActivity {
 	
@@ -30,6 +31,7 @@ public class GameActivity extends ActionBarActivity {
 	
 	private SharedPreferences myPreferences;
 	private Resources myResources;
+	private Context myContext;
 	
 	private String[] romanji;
 	private String[] hiragana;
@@ -48,6 +50,7 @@ public class GameActivity extends ActionBarActivity {
 		button4 = (Button) findViewById(R.id.button4);
 		
 		myResources = getResources();
+		myContext = getApplicationContext();
 		
 		romanji = myResources.getStringArray(R.array.romanji);
 		hiragana = myResources.getStringArray(R.array.hiragana);
@@ -102,6 +105,7 @@ public class GameActivity extends ActionBarActivity {
             rigth++;
 		} else{
 			wrong++;
+			Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
 		}
 		
 		count++;
@@ -116,6 +120,7 @@ public class GameActivity extends ActionBarActivity {
             rigth++;
 		} else{
 			wrong++;
+			Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
 		}
 		
 		count++;
@@ -130,6 +135,7 @@ public class GameActivity extends ActionBarActivity {
             rigth++;
 		} else{
 			wrong++;
+			Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
 		}
 		
 		count++;
@@ -144,6 +150,7 @@ public class GameActivity extends ActionBarActivity {
             rigth++;
 		} else{
 			wrong++;
+			Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
 		}
 		
 		count++;
@@ -153,7 +160,7 @@ public class GameActivity extends ActionBarActivity {
 	private void setButtons(){
 		
 		if(count >= upto){
-			if (myPreferences.getBoolean("katakana_checkbox", true)){
+			if ( myPreferences.getBoolean("katakana_checkbox", true) && Arrays.equals(kana, hiragana) ){
 		          count = 0;
 		          kana = katakana.clone();
 			} else{
