@@ -1,6 +1,6 @@
 package com.jorgecastillo.kanadrill;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 	
 	private SharedPreferences myPreferences;
 	private Context myContext;
@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
 		myContext = getApplicationContext();
 		myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-		if (!myPreferences.getBoolean("setup_true", false)){
+		if (!myPreferences.getBoolean("setup_true", false)) {
 			
 			SharedPreferences.Editor editMyPreferences = myPreferences.edit();
 			editMyPreferences.putBoolean("setup_true", true);
@@ -40,15 +40,8 @@ public class MainActivity extends ActionBarActivity {
 		}
 		
 	}
-
-	public void onClickButtonTrain(View view){
-	  
-		Intent intent = new Intent(this, TrainingActivity.class);
-		startActivity(intent);
-		
-	}
 	
-	public void onClickButtonStart(View view){
+	public void onClickButtonStart(View view) {
 		  
 		Intent intent = new Intent(this, GameActivity.class);
 		startActivity(intent);
@@ -57,17 +50,12 @@ public class MainActivity extends ActionBarActivity {
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			Intent intent = new Intent(this, SettingsActivity.class);

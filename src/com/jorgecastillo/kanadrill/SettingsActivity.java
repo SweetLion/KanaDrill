@@ -43,7 +43,9 @@ public class SettingsActivity extends PreferenceActivity {
 
 
 	private static boolean isXLargeTablet(Context context) {
-		return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
+		return (context.getResources().getConfiguration().screenLayout &
+				Configuration.SCREENLAYOUT_SIZE_MASK)
+				>= Configuration.SCREENLAYOUT_SIZE_XLARGE;
 	}
 
 
@@ -62,7 +64,9 @@ public class SettingsActivity extends PreferenceActivity {
 		}
 	}
 
-	private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
+	private static Preference.OnPreferenceChangeListener
+	sBindPreferenceSummaryToValueListener =
+			new Preference.OnPreferenceChangeListener() {
 		@Override
 		public boolean onPreferenceChange(Preference preference, Object value) {
 			String stringValue = value.toString();
@@ -75,7 +79,8 @@ public class SettingsActivity extends PreferenceActivity {
 
 				// Set the summary to reflect the new value.
 				preference
-						.setSummary(index >= 0 ? listPreference.getEntries()[index]
+						.setSummary(index >= 0 ?
+								listPreference.getEntries()[index]
 								: null);
 
 			} else {
@@ -91,7 +96,7 @@ public class SettingsActivity extends PreferenceActivity {
 	private static void bindPreferenceSummaryToValue(Preference preference) {
 		// Set the listener to watch for value changes.
 		preference
-				.setOnPreferenceChangeListener(sBindPreferenceSummaryToValueListener);
+		.setOnPreferenceChangeListener(sBindPreferenceSummaryToValueListener);
 
 		// Trigger the listener immediately with the preference's
 		// current value.
