@@ -1,4 +1,4 @@
-package com.jorgecastillo.kanadrill;
+/*package com.jorgecastillo.kanadrill;
 
 import android.app.Dialog;
 import android.app.Activity;
@@ -39,15 +39,15 @@ public class TrainingActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_training);
+		//setContentView(R.layout.activity_training);
 		
 		Resources myResources = getResources();
 		romanji = myResources.getStringArray(R.array.romanji);
 		hiragana = myResources.getStringArray(R.array.hiragana);
 		katakana = myResources.getStringArray(R.array.katakana);
 		
-		kanaDisplay = (TextView) findViewById(R.id.kanaDisplay);
-		kanaInput = (EditText) findViewById(R.id.kanaInput);
+		//kanaDisplay = (TextView) findViewById(R.id.kanaDisplay);
+		//kanaInput = (EditText) findViewById(R.id.kanaInput);
 		
 		myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 		
@@ -102,10 +102,10 @@ public class TrainingActivity extends Activity {
 		if(!kanaInput.getText().toString().equals(romanji[order[count]])){
 			
 			Dialog dialog = new Dialog(TrainingActivity.this);
-			dialog.setContentView(R.layout.dialog_view);
+			//dialog.setContentView(R.layout.dialog_view);
 			
-			TextView dialogKana = (TextView) dialog.findViewById(R.id.dialog_kana);
-			TextView dialogRomanji = (TextView) dialog.findViewById(R.id.dialog_romanji);
+			//TextView dialogKana = (TextView) dialog.findViewById(R.id.dialog_kana);
+			==TextView dialogRomanji = (TextView) dialog.findViewById(R.id.dialog_romanji);
 			
 			if (onhiragana){
 			    dialogKana.setText("  " + hiragana[order[count]] + "  ");
@@ -142,3 +142,4 @@ public class TrainingActivity extends Activity {
 	}
 	
 }
+*/

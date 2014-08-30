@@ -171,12 +171,19 @@ public class GameActivity extends Activity {
       }
     }
 
-    buttonValues[0] = CommonCode.randomInt(upto);
-    buttonValues[1] = CommonCode.randomInt(upto);
-    buttonValues[2] = CommonCode.randomInt(upto);
-    buttonValues[3] = CommonCode.randomInt(upto);
     replace = CommonCode.randomInt(4);
     buttonValues[replace] = order[count];
+    for(int i = 0; i < 4; i++){
+      int val;
+      if(i != replace){
+        val = CommonCode.randomInt(upto);
+        while(val == buttonValues[replace]){
+          val = CommonCode.randomInt(upto);
+        }
+        buttonValues[i] = val;
+      }
+      
+    }
 		
     gameText.setText(kana[order[count]]);
     button1.setText(romanji[buttonValues[0]]);
