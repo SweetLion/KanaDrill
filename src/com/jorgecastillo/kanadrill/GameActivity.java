@@ -160,12 +160,14 @@ public class GameActivity extends Activity {
         count = 0;
         kana = katakana.clone();
       } else{
-        Intent intent = new Intent(this, StatsActivity.class);
+        System.exit(0);
+        //I want to release this now!
+        /*Intent intent = new Intent(this, StatsActivity.class);
         intent.putExtra("HiraganaErrorRate","HiraganaErrorRateTXT");
         if (myPreferences.getBoolean("katakana_checkbox", true)) {
           intent.putExtra("KatakanaErrorRate","KatakanaErrorRateTXT");
         }
-        startActivity(intent);
+        startActivity(intent);*/
         // The next line is to avoid an ArrayIndexOutOfBoundsException
         count = 0;
       }
