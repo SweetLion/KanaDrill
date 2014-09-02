@@ -48,6 +48,13 @@ public class MainActivity extends Activity {
 		
 	}
 	
+	public void onClickButtonTrain(View view){
+	  
+	  Intent intent = new Intent(this, TrainingActivity.class);
+	  startActivity(intent);
+	  
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);

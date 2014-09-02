@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="38dp"
         android:orientation="horizontal" >
+        
 
         <Button
             android:id="@+id/button2"
@@ -47,11 +47,12 @@
 
     <TextView
         android:id="@+id/gameText"
+        android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/blank"
-        android:textSize="250sp" />
+        android:textSize="140sp" />
     
 </RelativeLayout>
