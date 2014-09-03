@@ -3,7 +3,6 @@ package com.jorgecastillo.kanadrill;
 import java.util.Arrays;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -12,7 +11,6 @@ import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class TrainingActivity extends Activity {
@@ -95,6 +93,8 @@ public class TrainingActivity extends Activity {
   
   public void onClickButtonNext(View view){
 
+    count++;
+
       if (count >= upto) {
         if (myPreferences.getBoolean("katakana_checkbox", true)
             && Arrays.equals(kana, hiragana)) {
@@ -107,12 +107,10 @@ public class TrainingActivity extends Activity {
         }
         
       }
-      
-      count++;
-      
+
       kanaText.setText(kana[order[count]]);
       romanjiText.setText(romanji[order[count]]);
-    
+
   }
   
 }
