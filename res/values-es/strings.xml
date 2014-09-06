@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Kana Drill</string>
     <string name="action_settings">Configuracion</string>
-    <string name="check">Check</string>
-    <string name="blank" />
     <string name="start_button">Inicio</string>
     <string name="train_button">Entrenar</string>
     <string name="next_button">Siguiente</string>

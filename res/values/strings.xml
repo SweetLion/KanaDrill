@@ -3,7 +3,6 @@
 
     <string name="app_name">Kana Drill</string>
     <string name="action_settings">Settings</string>
-    <string name="check">Check</string>
     <string name="blank" />
     <string name="start_button">Start</string>
     <string name="train_button">Train</string>
