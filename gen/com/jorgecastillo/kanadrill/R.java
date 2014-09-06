@@ -57,24 +57,23 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f070001;
         public static final int app_name=0x7f070000;
-        public static final int blank=0x7f070004;
+        public static final int blank=0x7f070003;
         public static final int check=0x7f070002;
-        public static final int hello_world=0x7f070009;
-        public static final int hint=0x7f070003;
-        public static final int kana_title=0x7f07000e;
-        public static final int katakana_summary=0x7f07000d;
-        public static final int katakana_title=0x7f07000c;
-        public static final int next_button=0x7f070007;
-        public static final int order_title=0x7f07000f;
+        public static final int kana_title=0x7f07000b;
+        public static final int katakana_summary=0x7f07000a;
+        public static final int katakana_title=0x7f070009;
+        public static final int next_button=0x7f070006;
+        public static final int order_title=0x7f07000c;
         /**  General settings 
+ General settings 
          */
-        public static final int pref_header_general=0x7f07000b;
-        public static final int start_button=0x7f070005;
+        public static final int pref_header_general=0x7f070008;
+        public static final int start_button=0x7f070004;
         /**  Strings related to Settings 
+ Strings related to Settings 
          */
-        public static final int title_activity_settings=0x7f07000a;
-        public static final int title_activity_training=0x7f070008;
-        public static final int train_button=0x7f070006;
+        public static final int title_activity_settings=0x7f070007;
+        public static final int train_button=0x7f070005;
     }
     public static final class style {
         public static final int AppBaseTheme=0x7f080000;
