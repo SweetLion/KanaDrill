@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="action_settings">Configuracion</string>
+    <string name="action_settings">Configuración</string>
     <string name="start_button">Inicio</string>
     <string name="train_button">Entrenar</string>
     <string name="next_button">Siguiente</string>
