@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+        
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton2"
+            android:text="@string/blank" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton4"
+            android:text="@string/blank" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton3"
+            android:text="@string/blank" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton1"
+            android:text="@string/blank" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/gameText"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/blank"
+        android:textSize="115sp" />
+    
+</RelativeLayout><!-- From: file:/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/layout-small/activity_game.xml -->

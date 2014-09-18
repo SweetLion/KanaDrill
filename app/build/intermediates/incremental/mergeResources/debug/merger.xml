@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res" >
+            <file
+                name="ic_launcher"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="pref_headers"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/xml/pref_headers.xml"
+                qualifiers=""
+                type="xml" />
+            <file
+                name="pref_general"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/xml/pref_general.xml"
+                qualifiers=""
+                type="xml" />
+            <file
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/values/strings_activity_settings.xml"
+                qualifiers="" >
+                <string name="title_activity_settings" >Settings
+                </string>
+
+                <string-array name="kana_options" >
+                    <item>
+First 45 (a to n)
+                    </item>
+                    <item>
+Plus (ga to po)
+                    </item>
+                    <item>
+Plus (kya to ryo)
+                    </item>
+                    <item>
+Plus (gya to Last)
+                    </item>
+                </string-array>
+
+                <string name="katakana_summary" >After hiragana show katakana
+                </string>
+
+                <string-array name="order_values" >
+                    <item>
+1
+                    </item>
+                    <item>
+2
+                    </item>
+                </string-array>
+
+                <string name="katakana_title" >Katakana too
+                </string>
+                <string name="kana_title" >How many kana
+                </string>
+
+                <string-array name="kana_values" >
+                    <item>
+1
+                    </item>
+                    <item>
+2
+                    </item>
+                    <item>
+3
+                    </item>
+                    <item>
+4
+                    </item>
+                </string-array>
+
+                <string name="order_title" >Displaying order
+                </string>
+                <string name="pref_header_general" >General
+                </string>
+
+                <string-array name="order_options" >
+                    <item>
+Random
+                    </item>
+                    <item>
+Linear
+                    </item>
+                </string-array>
+            </file>
+            <file
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/values/arrays.xml"
+                qualifiers="" >
+                <string-array name="hiragana" >
+                    <item>
+あ
+                    </item>
+                    <item>
+い
+                    </item>
+                    <item>
+う
+                    </item>
+                    <item>
+え
+                    </item>
+                    <item>
+お
+                    </item>
+                    <item>
+か
+                    </item>
+                    <item>
+き
+                    </item>
+                    <item>
+く
+                    </item>
+                    <item>
+け
+                    </item>
+                    <item>
+こ
+                    </item>
+                    <item>
+さ
+                    </item>
+                    <item>
+し
+                    </item>
+                    <item>
+す
+                    </item>
+                    <item>
+せ
+                    </item>
+                    <item>
+そ
+                    </item>
+                    <item>
+た
+                    </item>
+                    <item>
+ち
+                    </item>
+                    <item>
+つ
+                    </item>
+                    <item>
+て
+                    </item>
+                    <item>
+と
+                    </item>
+                    <item>
+な
+                    </item>
+                    <item>
+に
+                    </item>
+                    <item>
+ぬ
+                    </item>
+                    <item>
+ね
+                    </item>
+                    <item>
+の
+                    </item>
+                    <item>
+は
+                    </item>
+                    <item>
+ひ
+                    </item>
+                    <item>
+ふ
+                    </item>
+                    <item>
+へ
+                    </item>
+                    <item>
+ほ
+                    </item>
+                    <item>
+ま
+                    </item>
+                    <item>
+み
+                    </item>
+                    <item>
+む
+                    </item>
+                    <item>
+め
+                    </item>
+                    <item>
+も
+                    </item>
+                    <item>
+や
+                    </item>
+                    <item>
+ゆ
+                    </item>
+                    <item>
+よ
+                    </item>
+                    <item>
+ら
+                    </item>
+                    <item>
+り
+                    </item>
+                    <item>
+る
+                    </item>
+                    <item>
+れ
+                    </item>
+                    <item>
+ろ
+                    </item>
+                    <item>
+わ
+                    </item>
+                    <item>
+を
+                    </item>
+                    <item>
+ん
+                    </item>
+                    <item>
+が
+                    </item>
+                    <item>
+ぎ
+                    </item>
+                    <item>
+ぐ
+                    </item>
+                    <item>
+げ
+                    </item>
+                    <item>
+ご
+                    </item>
+                    <item>
+ざ
+                    </item>
+                    <item>
+じ
+                    </item>
+                    <item>
+ず
+                    </item>
+                    <item>
+ぜ
+                    </item>
+                    <item>
+ぞ
+                    </item>
+                    <item>
+だ
+                    </item>
+                    <item>
+ぢ
+                    </item>
+                    <item>
+づ
+                    </item>
+                    <item>
+で
+                    </item>
+                    <item>
+ど
+                    </item>
+                    <item>
+ば
+                    </item>
+                    <item>
+び
+                    </item>
+                    <item>
+ぶ
+                    </item>
+                    <item>
+べ
+                    </item>
+                    <item>
+ぼ
+                    </item>
+                    <item>
+ぱ
+                    </item>
+                    <item>
+ぴ
+                    </item>
+                    <item>
+ぷ
+                    </item>
+                    <item>
+ぺ
+                    </item>
+                    <item>
+ぽ
+                    </item>
+                    <item>
+きゃ
+                    </item>
+                    <item>
+きゅ
+                    </item>
+                    <item>
+きょ
+                    </item>
+                    <item>
+しゃ
+                    </item>
+                    <item>
+しゅ
+                    </item>
+                    <item>
+しょ
+                    </item>
+                    <item>
+ちゃ
+                    </item>
+                    <item>
+ちゅ
+                    </item>
+                    <item>
+ちょ
+                    </item>
+                    <item>
+にゃ
+                    </item>
+                    <item>
+にゅ
+                    </item>
+                    <item>
+にょ
+                    </item>
+                    <item>
+ひゃ
+                    </item>
+                    <item>
+ひゅ
+                    </item>
+                    <item>
+ひょ
+                    </item>
+                    <item>
+みゃ
+                    </item>
+                    <item>
+みゅ
+                    </item>
+                    <item>
+みょ
+                    </item>
+                    <item>
+りゃ
+                    </item>
+                    <item>
+りゅ
+                    </item>
+                    <item>
+りょ
+                    </item>
+                    <item>
+ぎゃ
+                    </item>
+                    <item>
+ぎゅ
+                    </item>
+                    <item>
+ぎょ
+                    </item>
+                    <item>
+じゃ
+                    </item>
+                    <item>
+じゅ
+                    </item>
+                    <item>
+じょ
+                    </item>
+                    <item>
+びゃ
+                    </item>
+                    <item>
+びゅ
+                    </item>
+                    <item>
+びょ
+                    </item>
+                    <item>
+ぴゃ
+                    </item>
+                    <item>
+ぴゅ
+                    </item>
+                    <item>
+ぴょ
+                    </item>
+                    <item>
+しぇ
+                    </item>
+                    <item>
+ちぇ
+                    </item>
+                    <item>
+じぇ
+                    </item>
+                </string-array>
+                <string-array name="katakana" >
+                    <item>
+ア
+                    </item>
+                    <item>
+イ
+                    </item>
+                    <item>
+ウ
+                    </item>
+                    <item>
+エ
+                    </item>
+                    <item>
+オ
+                    </item>
+                    <item>
+カ
+                    </item>
+                    <item>
+キ
+                    </item>
+                    <item>
+ク
+                    </item>
+                    <item>
+ケ
+                    </item>
+                    <item>
+コ
+                    </item>
+                    <item>
+サ
+                    </item>
+                    <item>
+シ
+                    </item>
+                    <item>
+ス
+                    </item>
+                    <item>
+セ
+                    </item>
+                    <item>
+ソ
+                    </item>
+                    <item>
+タ
+                    </item>
+                    <item>
+チ
+                    </item>
+                    <item>
+ツ
+                    </item>
+                    <item>
+テ
+                    </item>
+                    <item>
+ト
+                    </item>
+                    <item>
+ナ
+                    </item>
+                    <item>
+ニ
+                    </item>
+                    <item>
+ヌ
+                    </item>
+                    <item>
+ネ
+                    </item>
+                    <item>
+ノ
+                    </item>
+                    <item>
+ハ
+                    </item>
+                    <item>
+ヒ
+                    </item>
+                    <item>
+フ
+                    </item>
+                    <item>
+ヘ
+                    </item>
+                    <item>
+ホ
+                    </item>
+                    <item>
+マ
+                    </item>
+                    <item>
+ミ
+                    </item>
+                    <item>
+ム
+                    </item>
+                    <item>
+メ
+                    </item>
+                    <item>
+モ
+                    </item>
+                    <item>
+ヤ
+                    </item>
+                    <item>
+ユ
+                    </item>
+                    <item>
+ヨ
+                    </item>
+                    <item>
+ラ
+                    </item>
+                    <item>
+リ
+                    </item>
+                    <item>
+ル
+                    </item>
+                    <item>
+レ
+                    </item>
+                    <item>
+ロ
+                    </item>
+                    <item>
+ワ
+                    </item>
+                    <item>
+ヲ
+                    </item>
+                    <item>
+ン
+                    </item>
+                    <item>
+ガ
+                    </item>
+                    <item>
+ギ
+                    </item>
+                    <item>
+グ
+                    </item>
+                    <item>
+ゲ
+                    </item>
+                    <item>
+ゴ
+                    </item>
+                    <item>
+ザ
+                    </item>
+                    <item>
+ジ
+                    </item>
+                    <item>
+ズ
+                    </item>
+                    <item>
+ゼ
+                    </item>
+                    <item>
+ゾ
+                    </item>
+                    <item>
+ダ
+                    </item>
+                    <item>
+ヂ
+                    </item>
+                    <item>
+ヅ
+                    </item>
+                    <item>
+デ
+                    </item>
+                    <item>
+ﾄﾞ
+                    </item>
+                    <item>
+バ
+                    </item>
+                    <item>
+ビ
+                    </item>
+                    <item>
+ブ
+                    </item>
+                    <item>
+ベ
+                    </item>
+                    <item>
+ボ
+                    </item>
+                    <item>
+パ
+                    </item>
+                    <item>
+ピ
+                    </item>
+                    <item>
+プ
+                    </item>
+                    <item>
+ペ
+                    </item>
+                    <item>
+ポ
+                    </item>
+                    <item>
+キャ
+                    </item>
+                    <item>
+キュ
+                    </item>
+                    <item>
+キョ
+                    </item>
+                    <item>
+シャ
+                    </item>
+                    <item>
+シュ
+                    </item>
+                    <item>
+ショ
+                    </item>
+                    <item>
+チャ
+                    </item>
+                    <item>
+チュ
+                    </item>
+                    <item>
+チョ
+                    </item>
+                    <item>
+ニャ
+                    </item>
+                    <item>
+ニュ
+                    </item>
+                    <item>
+ニョ
+                    </item>
+                    <item>
+ヒャ
+                    </item>
+                    <item>
+ヒュ
+                    </item>
+                    <item>
+ヒョ
+                    </item>
+                    <item>
+ミャ
+                    </item>
+                    <item>
+ミュ
+                    </item>
+                    <item>
+ミョ
+                    </item>
+                    <item>
+リャ
+                    </item>
+                    <item>
+リュ
+                    </item>
+                    <item>
+リョ
+                    </item>
+                    <item>
+ギャ
+                    </item>
+                    <item>
+ギュ
+                    </item>
+                    <item>
+ギョ
+                    </item>
+                    <item>
+ジャ
+                    </item>
+                    <item>
+ジュ
+                    </item>
+                    <item>
+ジョ
+                    </item>
+                    <item>
+ビャ
+                    </item>
+                    <item>
+ビュ
+                    </item>
+                    <item>
+ビョ
+                    </item>
+                    <item>
+ピャ
+                    </item>
+                    <item>
+ピュ
+                    </item>
+                    <item>
+ピョ
+                    </item>
+                    <item>
+シェ
+                    </item>
+                    <item>
+チェ
+                    </item>
+                    <item>
+ジェ
+                    </item>
+                </string-array>
+                <string-array name="romanji" >
+                    <item>
+a
+                    </item>
+                    <item>
+i
+                    </item>
+                    <item>
+u
+                    </item>
+                    <item>
+e
+                    </item>
+                    <item>
+o
+                    </item>
+                    <item>
+ka
+                    </item>
+                    <item>
+ki
+                    </item>
+                    <item>
+ku
+                    </item>
+                    <item>
+ke
+                    </item>
+                    <item>
+ko
+                    </item>
+                    <item>
+sa
+                    </item>
+                    <item>
+shi
+                    </item>
+                    <item>
+su
+                    </item>
+                    <item>
+se
+                    </item>
+                    <item>
+so
+                    </item>
+                    <item>
+ta
+                    </item>
+                    <item>
+chi
+                    </item>
+                    <item>
+tsu
+                    </item>
+                    <item>
+te
+                    </item>
+                    <item>
+to
+                    </item>
+                    <item>
+na
+                    </item>
+                    <item>
+ni
+                    </item>
+                    <item>
+nu
+                    </item>
+                    <item>
+ne
+                    </item>
+                    <item>
+no
+                    </item>
+                    <item>
+ha
+                    </item>
+                    <item>
+hi
+                    </item>
+                    <item>
+fu
+                    </item>
+                    <item>
+he
+                    </item>
+                    <item>
+ho
+                    </item>
+                    <item>
+ma
+                    </item>
+                    <item>
+mi
+                    </item>
+                    <item>
+mu
+                    </item>
+                    <item>
+me
+                    </item>
+                    <item>
+mo
+                    </item>
+                    <item>
+ya
+                    </item>
+                    <item>
+yu
+                    </item>
+                    <item>
+yo
+                    </item>
+                    <item>
+ra
+                    </item>
+                    <item>
+ri
+                    </item>
+                    <item>
+ru
+                    </item>
+                    <item>
+re
+                    </item>
+                    <item>
+ro
+                    </item>
+                    <item>
+wa
+                    </item>
+                    <item>
+wo
+                    </item>
+                    <item>
+n
+                    </item>
+                    <item>
+ga
+                    </item>
+                    <item>
+gi
+                    </item>
+                    <item>
+gu
+                    </item>
+                    <item>
+ge
+                    </item>
+                    <item>
+go
+                    </item>
+                    <item>
+za
+                    </item>
+                    <item>
+ji
+                    </item>
+                    <item>
+zu
+                    </item>
+                    <item>
+ze
+                    </item>
+                    <item>
+zo
+                    </item>
+                    <item>
+da
+                    </item>
+                    <item>
+ji
+                    </item>
+                    <item>
+zu
+                    </item>
+                    <item>
+de
+                    </item>
+                    <item>
+do
+                    </item>
+                    <item>
+ba
+                    </item>
+                    <item>
+bi
+                    </item>
+                    <item>
+bu
+                    </item>
+                    <item>
+be
+                    </item>
+                    <item>
+bo
+                    </item>
+                    <item>
+pa
+                    </item>
+                    <item>
+pi
+                    </item>
+                    <item>
+pu
+                    </item>
+                    <item>
+pe
+                    </item>
+                    <item>
+po
+                    </item>
+                    <item>
+kya
+                    </item>
+                    <item>
+kyu
+                    </item>
+                    <item>
+kyo
+                    </item>
+                    <item>
+sha
+                    </item>
+                    <item>
+shu
+                    </item>
+                    <item>
+sho
+                    </item>
+                    <item>
+cha
+                    </item>
+                    <item>
+chu
+                    </item>
+                    <item>
+cho
+                    </item>
+                    <item>
+nya
+                    </item>
+                    <item>
+nyu
+                    </item>
+                    <item>
+nyo
+                    </item>
+                    <item>
+hya
+                    </item>
+                    <item>
+hyu
+                    </item>
+                    <item>
+hyo
+                    </item>
+                    <item>
+mya
+                    </item>
+                    <item>
+myu
+                    </item>
+                    <item>
+myo
+                    </item>
+                    <item>
+rya
+                    </item>
+                    <item>
+ryu
+                    </item>
+                    <item>
+ryo
+                    </item>
+                    <item>
+gya
+                    </item>
+                    <item>
+gyu
+                    </item>
+                    <item>
+gyo
+                    </item>
+                    <item>
+ja
+                    </item>
+                    <item>
+ju
+                    </item>
+                    <item>
+jo
+                    </item>
+                    <item>
+bya
+                    </item>
+                    <item>
+byu
+                    </item>
+                    <item>
+byo
+                    </item>
+                    <item>
+pya
+                    </item>
+                    <item>
+pyu
+                    </item>
+                    <item>
+pyo
+                    </item>
+                    <item>
+she
+                    </item>
+                    <item>
+che
+                    </item>
+                    <item>
+je
+                    </item>
+                </string-array>
+            </file>
+            <file
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/values/dimens.xml"
+                qualifiers="" >
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+            </file>
+            <file
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="start_button" >Start
+                </string>
+                <string name="action_settings" >Settings
+                </string>
+                <string name="next_button" >Next
+                </string>
+                <string name="train_button" >Train
+                </string>
+                <string name="app_name" >Kana Drill
+                </string>
+                <string name="blank" ></string>
+            </file>
+            <file
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/values/styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+                </style>
+            </file>
+            <file
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/values-w820dp/dimens.xml"
+                qualifiers="w820dp-v13" >
+                <dimen name="activity_horizontal_margin" >64dp
+                </dimen>
+            </file>
+            <file
+                name="activity_game"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/layout/activity_game.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/layout/activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_training"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/layout/activity_training.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="ic_launcher"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/values-es/strings_activity_settings.xml"
+                qualifiers="es" >
+                <string-array name="order_options" >
+                    <item>
+Aleatorio
+                    </item>
+                    <item>
+Lineal
+                    </item>
+                </string-array>
+                <string-array name="kana_options" >
+                    <item>
+Primeras 45 (a - n)
+                    </item>
+                    <item>
+Mas (ga - po)
+                    </item>
+                    <item>
+Mas (kya - ryo)
+                    </item>
+                    <item>
+Mas (gya - Last)
+                    </item>
+                </string-array>
+
+                <string name="kana_title" >Cuantas kanas
+                </string>
+                <string name="pref_header_general" >General
+                </string>
+                <string name="title_activity_settings" >Configuración
+                </string>
+                <string name="katakana_summary" >Después de las hiragana mostrar las katakana
+                </string>
+                <string name="order_title" >Mostrar en orden
+                </string>
+                <string name="katakana_title" >Katakana también
+                </string>
+            </file>
+            <file
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/values-es/strings.xml"
+                qualifiers="es" >
+                <string name="next_button" >Siguiente
+                </string>
+                <string name="train_button" >Entrenar
+                </string>
+                <string name="start_button" >Inicio
+                </string>
+                <string name="action_settings" >Configuración
+                </string>
+            </file>
+            <file
+                name="main"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/menu/main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="training"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/menu/training.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="ic_launcher"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="activity_game"
+                path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/main/res/layout-small/activity_game.xml"
+                qualifiers="small-v4"
+                type="layout" />
+        </source>
+        <source path="/home/jorge/AndroidstudioProjects/KanaDrill/app/build/generated/res/rs/debug" />
+        <source path="/home/jorge/AndroidstudioProjects/KanaDrill/app/build/generated/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/jorge/AndroidstudioProjects/KanaDrill/app/src/debug/res" />
+    </dataSet>
+
+</merger>
