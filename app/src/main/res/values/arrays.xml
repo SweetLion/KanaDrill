@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="romanji">
+    <string-array name="romanji" translatable="false">
         <item>a</item>
         <item>i</item>
         <item>u</item>
@@ -112,7 +112,7 @@
         <item>che</item>
         <item>je</item>
     </string-array>
-    <string-array name="hiragana">
+    <string-array name="hiragana" translatable="false">
         <item>あ</item>
         <item>い</item>
         <item>う</item>
@@ -224,7 +224,7 @@
         <item>ちぇ</item>
         <item>じぇ</item>
     </string-array>
-    <string-array name="katakana">
+    <string-array name="katakana" translatable="false">
         <item>ア</item>
         <item>イ</item>
         <item>ウ</item>

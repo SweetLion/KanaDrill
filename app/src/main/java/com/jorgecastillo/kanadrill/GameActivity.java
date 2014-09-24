@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
@@ -85,17 +86,6 @@ public class GameActivity extends Activity {
     getMenuInflater().inflate(R.menu.main, menu);
     return true;
 
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    int id = item.getItemId();
-    if (id == R.id.action_settings) {
-      Intent intent = new Intent(this, SettingsActivity.class);
-      startActivity(intent);
-      return true;
-    }
-    return super.onOptionsItemSelected(item);
   }
 
   public void onClickButton1(View view) {
@@ -179,12 +169,13 @@ public class GameActivity extends Activity {
       int val;
       if(i != replace){
         val = CommonCode.randomInt(upto);
-        while(val == buttonValues[replace]){
-          val = CommonCode.randomInt(upto);
+        for(int j = 0; j < i; j++) {
+          while(val == buttonValues[j]){
+            val = CommonCode.randomInt(upto);
+          }
         }
         buttonValues[i] = val;
       }
-      
     }
 		
     gameText.setText(kana[order[count]]);
@@ -194,4 +185,33 @@ public class GameActivity extends Activity {
     button4.setText(romanji[buttonValues[3]]);
 
   }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        Intent intent;
+        myResources = getResources();
+        switch (id){
+            case R.id.action_settings:
+                intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_contact:
+                intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "vookat@gmail.com", null));
+                intent.putExtra(Intent.EXTRA_SUBJECT, "KanaDrill App - ");
+                startActivity(Intent.createChooser(intent, myResources.getString(R.string.action_contact_title)));
+                return true;
+            case R.id.action_share:
+                String urlToShare = "https://play.google.com/store/apps/details?id=com.jorgecastillo.kanadrill";
+                intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, urlToShare);
+                intent.setPackage("com.facebook.katana");
+                startActivity(intent);
+                return true;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

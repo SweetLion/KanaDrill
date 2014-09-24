@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="action_contact">Contactar</string>
+
+    <string name="action_contact_title">Enviar un correo al autor</string>
+    <string name="action_share">Compartir</string>
     <string name="action_settings">Configuración</string>
     <string name="start_button">Inicio</string>
     <string name="train_button">Entrenar</string>

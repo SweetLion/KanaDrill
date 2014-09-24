@@ -17,7 +17,7 @@
         <item>Plus (kya to ryo)</item>
         <item>Plus (gya to Last)</item>
     </string-array>
-    <string-array name="kana_values">
+    <string-array name="kana_values" translatable="false">
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -29,7 +29,7 @@
         <item>Random</item>
         <item>Linear</item>
     </string-array>
-    <string-array name="order_values">
+    <string-array name="order_values" translatable="false">
         <item>1</item>
         <item>2</item>
     </string-array>
