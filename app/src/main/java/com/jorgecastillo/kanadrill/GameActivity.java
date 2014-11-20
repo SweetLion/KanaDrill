@@ -28,7 +28,6 @@ public class GameActivity extends Activity {
   private int wrong;
   @SuppressWarnings("unused")
   private int rigth;
-  private int replace;
 
   private int[] order;
   private int[] buttonValues = new int[4];
@@ -163,19 +162,22 @@ public class GameActivity extends Activity {
       }
     }
 
-    replace = CommonCode.randomInt(4);
+    int replace = CommonCode.randomInt(4);
     buttonValues[replace] = order[count];
     for(int i = 0; i < 4; i++){
+
       int val;
-      if(i != replace){
+      if(i != replace) {
         val = CommonCode.randomInt(upto);
-        for(int j = 0; j < i; j++) {
-          while(val == buttonValues[j]){
+        for (int j = 0; j < i; j++) {
+          if (val == buttonValues[j] || val == buttonValues[replace]) {
+            j = -1;
             val = CommonCode.randomInt(upto);
           }
         }
         buttonValues[i] = val;
       }
+
     }
 		
     gameText.setText(kana[order[count]]);
