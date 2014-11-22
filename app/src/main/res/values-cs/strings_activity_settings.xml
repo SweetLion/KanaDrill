@@ -1,0 +1,37 @@
+<resources>
+    
+    <!-- Strings related to Settings -->
+    
+    <string name="title_activity_settings">Nastavení</string>
+
+    <!-- General settings -->
+    <string name="pref_header_general">Všeobecné</string>
+    
+    <string name="katakana_title">Také katakana</string>
+    <string name="katakana_summary">Po hiragana zobrazovat katakana</string>
+    
+    <string name="kana_title">Počet kana</string>
+    <string-array name="kana_options">
+        <item>Prvních 45 (a - n)</item>
+        <item>Plus (ga - po)</item>
+        <item>Plus (kya - ryo)</item>
+        <item>Plus (gya - konce)</item>
+    </string-array>
+    <string-array name="kana_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    
+    <string name="order_title">Pořadí zobrazení</string>
+    <string-array name="order_options">
+        <item>Náhodné</item>
+        <item>Postupné</item>
+    </string-array>
+    <string-array name="order_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    
+</resources>

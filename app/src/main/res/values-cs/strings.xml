@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_contact">Kontakt</string>
+    <string name="action_contact_title">Poslat email autorovi</string>
+    <string name="action_share">Sdílet</string>
+    <string name="app_name" translatable="false">KanaDrill</string>
+    <string name="action_settings">Nastavení</string>
+    <string name="blank" translatable="false" />
+    <string name="start_button">Spustit</string>
+    <string name="train_button">Trénovat</string>
+    <string name="next_button">Další</string>
+
+</resources>
