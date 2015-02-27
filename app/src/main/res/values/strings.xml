@@ -9,6 +9,7 @@
     <string name="blank" translatable="false" />
     <string name="start_button">Start</string>
     <string name="train_button">Train</string>
+    <string name="kanji_button">Kanji</string>
     <string name="next_button">Next</string>
 
 </resources>

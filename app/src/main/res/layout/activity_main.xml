@@ -14,12 +14,19 @@
         android:layout_height="wrap_content"
         android:text="@string/start_button"
         android:onClick="onClickButtonStart" />
-    
+
     <Button
         android:id="@+id/buttonTraining"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/train_button"
         android:onClick="onClickButtonTrain" />
+
+    <Button
+        android:id="@+id/buttonKanji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kanji_button"
+        android:onClick="onClickButtonKanji" />
     
 </LinearLayout>

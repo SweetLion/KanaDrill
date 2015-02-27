@@ -57,6 +57,12 @@ public class MainActivity extends Activity {
 	  startActivity(intent);
 	  
 	}
+    public void onClickButtonKanji(View view){
+
+        Intent intent = new Intent(this, KanjiActivity.class);
+        startActivity(intent);
+
+    }
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
