@@ -93,7 +93,7 @@ public class KanjiActivity extends Activity {
     public void onClickButton1(View view) {
         if (order[count] == buttonValues[0]) {
         } else {
-            Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
+            wrongKanji(order[count]);
         }
         count++;
         setButtons();
@@ -102,7 +102,7 @@ public class KanjiActivity extends Activity {
     public void onClickButton2(View view) {
         if (order[count] == buttonValues[1]) {
         } else {
-            Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
+            wrongKanji(order[count]);
         }
         count++;
         setButtons();
@@ -111,7 +111,7 @@ public class KanjiActivity extends Activity {
     public void onClickButton3(View view) {
         if (order[count] == buttonValues[2]) {
         } else {
-            Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
+            wrongKanji(order[count]);
         }
         count++;
         setButtons();
@@ -120,12 +120,18 @@ public class KanjiActivity extends Activity {
     public void onClickButton4(View view) {
         if (order[count] == buttonValues[3]) {
         } else {
-            Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
+            wrongKanji(order[count]);
         }
         count++;
         setButtons();
     }
 
+    public void wrongKanji(int count){
+        KanaDrillDialog kdd = new KanaDrillDialog();
+        kdd.setTitle(getString(R.string.wrong_kanji));
+        kdd.setValues(kanji[count], english[count]);
+        kdd.show(getFragmentManager(), "Kanji Dialog");
+    }
     private void setButtons() {
 
         if (count >= upto){

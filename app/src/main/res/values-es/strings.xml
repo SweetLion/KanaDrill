@@ -9,5 +9,8 @@
     <string name="start_button">Inicio</string>
     <string name="train_button">Entrenar</string>
     <string name="next_button">Siguiente</string>
+    <string name="wrong_kana">Kana Equivocado</string>
+    <string name="okay">Aceptar</string>
+    <string name="wrong_kanji">Kanji Equivocado</string>
 
 </resources>

@@ -93,7 +93,7 @@ public class GameActivity extends Activity {
       rigth++;
     } else {
       wrong++;
-      Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
+      wrongKana(order[count]);
     }
 
     count++;
@@ -107,7 +107,7 @@ public class GameActivity extends Activity {
       rigth++;
     } else {
       wrong++;
-      Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
+      wrongKana(order[count]);
     }
 
     count++;
@@ -121,7 +121,7 @@ public class GameActivity extends Activity {
       rigth++;
     } else {
       wrong++;
-      Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
+      wrongKana(order[count]);
     }
 
     count++;
@@ -135,11 +135,18 @@ public class GameActivity extends Activity {
       rigth++;
     } else {
       wrong++;
-			Toast.makeText(myContext, "Wrong!", Toast.LENGTH_SHORT).show();
-		}
+      wrongKana(order[count]);
+    }
 
     count++;
     setButtons();
+  }
+
+  public void wrongKana(int count){
+    KanaDrillDialog kdd = new KanaDrillDialog();
+    kdd.setTitle(getString(R.string.wrong_kana));
+    kdd.setValues(romanji[count], kana[count]);
+    kdd.show(getFragmentManager(), "Kana Dialog");
   }
 
   private void setButtons() {

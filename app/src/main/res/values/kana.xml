@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="kana">
+    <string-array name="kana" translatable="false">
         <item>ア</item>
         <item>アイ、あわ-れ、あわ-れむ</item>
         <item>アイ</item>

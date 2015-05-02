@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="english">
+    <string-array name="english" translatable="false">
         <item>sub-</item>
         <item>pathetic</item>
         <item>push open</item>

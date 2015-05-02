@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="kanji">
+    <string-array name="kanji" translatable="false">
         ﻿<item>亜</item>
         <item>哀</item>
         <item>挨</item>

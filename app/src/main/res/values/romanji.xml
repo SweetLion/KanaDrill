@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="kanjiromanji">
+    <string-array name="kanjiromanji" translatable="false">
         <item>a</item>
         <item>ai, awa-re, awa-remu</item>
         <item>ai</item>
