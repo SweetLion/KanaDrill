@@ -1,5 +1,12 @@
 package com.jorgecastillo.kanadrill;
 
+import android.content.Context;
+import android.util.Log;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.StringWriter;
 import java.util.Arrays;
 
 public class CommonCode {
@@ -71,4 +78,48 @@ public class CommonCode {
 
     return number;
   }
+
+  public static void intArrayToFile(Context myContext, String filename, int[] array){
+    File root = myContext.getFilesDir();
+    File current = new File(root, filename);
+    current.delete();
+    FileOutputStream outputStream;
+    try {
+      outputStream = myContext.openFileOutput(filename, Context.MODE_APPEND);
+      for (int i : array) {
+        String s = "" + i;
+        outputStream.write(s.getBytes());
+        outputStream.write("\n".getBytes());
+      }
+      outputStream.close();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
+  }
+
+  public static int[] fileToIntArray(Context myContext, String filename, int size){
+
+    int[] array = new int[size];
+    int i = 0;
+    FileInputStream inputStream;
+    try {
+      int c;
+      inputStream = myContext.openFileInput(filename);
+      StringWriter writer = new StringWriter();
+      while((c = inputStream.read()) != -1 ){
+        writer.append((char) c);
+      }
+      String ints[] = writer.toString().split("\n");
+      for (String s : ints){
+        array[i++] = Integer.parseInt(s);
+      }
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
+    return array;
+  }
+
 }

@@ -42,6 +42,7 @@ public class KanjiActivity extends Activity {
         myContext = getApplicationContext();
 		kanji = myResources.getStringArray(R.array.kanji);
 		english = myResources.getStringArray(R.array.english);
+        kana = myResources.getStringArray(R.array.kana);
 		
 		kanjiDisplay = (TextView) findViewById(R.id.kanjiText);
         button1 = (Button) findViewById(R.id.buttonkanji1);
@@ -139,17 +140,17 @@ public class KanjiActivity extends Activity {
             count = 0;
         }
 
-        int replace = randomInt(4);
+        int replace = CommonCode.randomInt(4);
         buttonValues[replace] = order[count];
 
         for (int i = 0; i < 4; i++){
             int val;
             if (i != replace) {
-                val = randomInt(upto);
+                val = CommonCode.randomInt(upto);
                 for (int j = 0; j < i; j++) {
                     if (val == buttonValues[j] || val == buttonValues[replace]) {
                         j = -1;
-                        val = randomInt(upto);
+                        val = CommonCode.randomInt(upto);
                     }
                 }
                 buttonValues[i] = val;
@@ -172,23 +173,5 @@ public class KanjiActivity extends Activity {
         }
         return false;
     }
-
-    private void orderRandom(int upto, int[] order){
-        Arrays.fill(order, -1);
-        for (int i = 0; i < upto;){
-            int val = (int) Math.floor(Math.random() * upto);
-            if (!intExists(order, val, upto)){
-                order[i] = val;
-                i++;
-            }
-        }
-    }
-
-    private int randomInt(int upto) {
-        int number;
-        number = (int) Math.floor(Math.random() * upto);
-        return number;
-    }
-
 
 }
