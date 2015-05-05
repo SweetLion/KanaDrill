@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,9 +24,8 @@ public class KanjiActivity extends Activity {
 	private String[] kanji;
 	private String[] english;
 	private String[] kana;
-	private String[] romanji;
+    private int[] english_rigth;
 	private TextView kanjiDisplay;
-	private EditText kanjiInput;
     private int[] order;
     private int upto = 2136;
     int[] buttonValues = new int[4];
@@ -43,6 +43,8 @@ public class KanjiActivity extends Activity {
 		kanji = myResources.getStringArray(R.array.kanji);
 		english = myResources.getStringArray(R.array.english);
         kana = myResources.getStringArray(R.array.kana);
+        english_rigth = CommonCode.fileToIntArray(myContext, "english_rigth.txt", 2136);
+        Log.v("PRIMER VALOR", "" + english_rigth[order[count]]);
 		
 		kanjiDisplay = (TextView) findViewById(R.id.kanjiText);
         button1 = (Button) findViewById(R.id.buttonkanji1);
@@ -75,24 +77,11 @@ public class KanjiActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	/*
-	public void onClickButtonOkay(View view){
-		
-		if (count == 829){
-			count = 830;
-		}
-			
-		kanjiDisplay.setText(kanji[count]);
-		kanjiInput.setText(english[count++]);
-		
-		if (count >= 2136){
-			count = 0;
-		}
-		
-	}*/
 
     public void onClickButton1(View view) {
         if (order[count] == buttonValues[0]) {
+            english_rigth[order[count]] = 1;
+            CommonCode.intArrayToFile(myContext, "english_rigth.txt", english_rigth);
         } else {
             wrongKanji(order[count]);
         }
@@ -102,6 +91,9 @@ public class KanjiActivity extends Activity {
 
     public void onClickButton2(View view) {
         if (order[count] == buttonValues[1]) {
+            english_rigth[order[count]] = 1;
+            Log.v("VALOR A ESCRIBIR", "" + 1);
+            CommonCode.intArrayToFile(myContext, "english_rigth.txt", english_rigth);
         } else {
             wrongKanji(order[count]);
         }
@@ -111,6 +103,8 @@ public class KanjiActivity extends Activity {
 
     public void onClickButton3(View view) {
         if (order[count] == buttonValues[2]) {
+            english_rigth[order[count]] = 1;
+            CommonCode.intArrayToFile(myContext, "english_rigth.txt", english_rigth);
         } else {
             wrongKanji(order[count]);
         }
@@ -120,6 +114,8 @@ public class KanjiActivity extends Activity {
 
     public void onClickButton4(View view) {
         if (order[count] == buttonValues[3]) {
+            english_rigth[order[count]] = 1;
+            CommonCode.intArrayToFile(myContext, "english_rigth.txt", english_rigth);
         } else {
             wrongKanji(order[count]);
         }
@@ -138,6 +134,9 @@ public class KanjiActivity extends Activity {
         if (count >= upto){
             System.exit(0);
             count = 0;
+        }
+        while(english_rigth[order[count]] == 1){
+            count++;
         }
 
         int replace = CommonCode.randomInt(4);

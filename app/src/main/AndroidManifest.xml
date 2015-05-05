@@ -34,7 +34,6 @@
             android:name=".GameActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-            android:noHistory="true"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" >
         </activity>
@@ -42,7 +41,6 @@
             android:name=".TrainingActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-            android:noHistory="true"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" >
         </activity>
@@ -50,7 +48,6 @@
             android:name=".KanjiActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-            android:noHistory="true"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" >
         </activity>
