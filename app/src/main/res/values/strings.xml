@@ -7,7 +7,7 @@
     <string name="app_name" translatable="false">KanaDrill</string>
     <string name="action_settings">Settings</string>
     <string name="blank" translatable="false" />
-    <string name="start_button">Start</string>
+    <string name="kana_button" translatable="false">Kana</string>
     <string name="train_button">Train</string>
     <string name="kanji_button" translatable="false">Kanji</string>
     <string name="next_button">Next</string>
