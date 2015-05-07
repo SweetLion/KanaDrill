@@ -6,25 +6,22 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Arrays;
 
 public class KanjiActivity extends Activity {
 
     private Context myContext;
 	private int count;
+    private boolean onenglish = true;
 	private String[] kanji;
 	private String[] english;
 	private String[] kana;
     private int[] english_right;
+    private int[] kana_right;
 	private TextView kanjiDisplay;
     private int[] order;
     private int upto = 2136;
@@ -44,7 +41,7 @@ public class KanjiActivity extends Activity {
 		english = myResources.getStringArray(R.array.english);
         kana = myResources.getStringArray(R.array.kana);
         english_right = CommonCode.fileToIntArray(myContext, "english_right.txt", 2136);
-        Log.v("PRIMER VALOR", "" + english_right[order[count]]);
+        kana_right = CommonCode.fileToIntArray(myContext, "kana_right.txt", 2136);
 		
 		kanjiDisplay = (TextView) findViewById(R.id.kanjiText);
         button1 = (Button) findViewById(R.id.buttonkanji1);
@@ -52,7 +49,7 @@ public class KanjiActivity extends Activity {
         button3 = (Button) findViewById(R.id.buttonkanji3);
         button4 = (Button) findViewById(R.id.buttonkanji4);
         CommonCode.orderLinear(upto, order);
-		setButtons();
+        setButtons(english_right, english);
 
 	}
 
@@ -60,21 +57,17 @@ public class KanjiActivity extends Activity {
     public void onStop(){
         super.onStop();
         CommonCode.intArrayToFile(myContext, "english_right.txt", english_right);
+        CommonCode.intArrayToFile(myContext, "kana_right.txt", kana_right);
     }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			Intent intent = new Intent(this, SettingsActivity.class);
@@ -85,58 +78,67 @@ public class KanjiActivity extends Activity {
 	}
 
     public void onClickButton1(View view) {
-        if (order[count] == buttonValues[0]) {
-            english_right[order[count]] = 1;
-        } else {
-            wrongKanji(order[count]);
-        }
-        count++;
-        setButtons();
+        everyButton(0);
     }
 
     public void onClickButton2(View view) {
-        if (order[count] == buttonValues[1]) {
-            english_right[order[count]] = 1;
-        } else {
-            wrongKanji(order[count]);
-        }
-        count++;
-        setButtons();
+        everyButton(1);
     }
 
     public void onClickButton3(View view) {
-        if (order[count] == buttonValues[2]) {
-            english_right[order[count]] = 1;
-        } else {
-            wrongKanji(order[count]);
-        }
-        count++;
-        setButtons();
+        everyButton(2);
     }
 
     public void onClickButton4(View view) {
-        if (order[count] == buttonValues[3]) {
-            english_right[order[count]] = 1;
-        } else {
-            wrongKanji(order[count]);
-        }
-        count++;
-        setButtons();
+        everyButton(3);
     }
 
-    public void wrongKanji(int count){
-        KanaDrillDialog kdd = new KanaDrillDialog();
-        kdd.setTitle(getString(R.string.wrong_kanji));
-        kdd.setValues(kanji[count], english[count]);
-        kdd.show(getFragmentManager(), "Kanji Dialog");
+    public void everyButton(int value){
+        if(onenglish){
+            checkValues(value, english_right, english);
+            setButtons(kana_right, kana);
+        } else {
+            checkValues(value, kana_right, kana);
+            count++;
+            setButtons(english_right, english);
+        }
+        onenglish = !onenglish;
     }
-    private void setButtons() {
+
+    public void checkValues(int value, int[] value_right, String[] values){
+        if (order[count] == buttonValues[value]) {
+            value_right[order[count]] = 1;
+        } else {
+            wrongInput(order[count], values);
+        }
+    }
+
+    public void onClickTextViewKanji(View view) {
+        if(onenglish){
+            wrongInput(order[count], english);
+            setButtons(kana_right, kana);
+        } else {
+            wrongInput(order[count], kana);
+            count++;
+            setButtons(english_right, english);
+        }
+        onenglish = !onenglish;
+    }
+
+    public void wrongInput(int count, String[] values){
+        KanaDrillDialog kdd = new KanaDrillDialog();
+        kdd.setTitle(getString(R.string.wrong_value));
+        kdd.setValues(kanji[count], values[count]);
+        kdd.show(getFragmentManager(), "KanaDrill Dialog");
+    }
+
+    private void setButtons(int[] value_right, String[] values) {
 
         if (count >= upto){
             System.exit(0);
             count = 0;
         }
-        while(english_right[order[count]] == 1){
+        while(value_right[order[count]] == 1){
             count++;
         }
 
@@ -158,20 +160,11 @@ public class KanjiActivity extends Activity {
         }
 
         kanjiDisplay.setText(kanji[order[count]]);
-        button1.setText(english[buttonValues[0]]);
-        button2.setText(english[buttonValues[1]]);
-        button3.setText(english[buttonValues[2]]);
-        button4.setText(english[buttonValues[3]]);
+        button1.setText(values[buttonValues[0]]);
+        button2.setText(values[buttonValues[1]]);
+        button3.setText(values[buttonValues[2]]);
+        button4.setText(values[buttonValues[3]]);
 
-    }
-
-    private boolean intExists(int[] vector, int element, int length){
-        for(int i = 0; i < length; i++){
-            if (vector[i] == element){
-                return true;
-            }
-        }
-        return false;
     }
 
 }

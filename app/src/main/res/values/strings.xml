@@ -13,6 +13,6 @@
     <string name="next_button">Next</string>
     <string name="wrong_kana">Wrong Kana</string>
     <string name="okay">Okay</string>
-    <string name="wrong_kanji">Wrong Kanji</string>
+    <string name="wrong_value">Wrong Value</string>
 
 </resources>

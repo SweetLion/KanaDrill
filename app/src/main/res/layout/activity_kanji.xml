@@ -64,6 +64,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/blank"
-        android:textSize="140sp" />
+        android:textSize="140sp"
+        android:clickable="true"
+        android:onClick="onClickTextViewKanji" />
 
 </RelativeLayout>

@@ -13,7 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Arrays;
 
@@ -157,13 +156,6 @@ public class GameActivity extends Activity {
         kana = katakana.clone();
       } else{
         System.exit(0);
-        //I want to release this now!
-        /*Intent intent = new Intent(this, StatsActivity.class);
-        intent.putExtra("HiraganaErrorRate","HiraganaErrorRateTXT");
-        if (myPreferences.getBoolean("katakana_checkbox", true)) {
-          intent.putExtra("KatakanaErrorRate","KatakanaErrorRateTXT");
-        }
-        startActivity(intent);*/
         // The next line is to avoid an ArrayIndexOutOfBoundsException
         count = 0;
       }

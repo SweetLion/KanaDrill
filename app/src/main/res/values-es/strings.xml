@@ -10,6 +10,6 @@
     <string name="next_button">Siguiente</string>
     <string name="wrong_kana">Kana Equivocado</string>
     <string name="okay">Aceptar</string>
-    <string name="wrong_kanji">Kanji Equivocado</string>
+    <string name="wrong_value">Valor Equivocado</string>
 
 </resources>
