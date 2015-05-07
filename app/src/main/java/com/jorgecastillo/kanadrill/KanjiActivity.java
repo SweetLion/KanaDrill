@@ -15,7 +15,8 @@ import android.widget.TextView;
 public class KanjiActivity extends Activity {
 
     private Context myContext;
-	private int count;
+    private int kana_count;
+    private int english_count;
     private boolean onenglish = true;
 	private String[] kanji;
 	private String[] english;
@@ -49,7 +50,7 @@ public class KanjiActivity extends Activity {
         button3 = (Button) findViewById(R.id.buttonkanji3);
         button4 = (Button) findViewById(R.id.buttonkanji4);
         CommonCode.orderLinear(upto, order);
-        setButtons(english_right, english);
+        english_count = setButtons(english_right, english, english_count);
 
 	}
 
@@ -95,17 +96,18 @@ public class KanjiActivity extends Activity {
 
     public void everyButton(int value){
         if(onenglish){
-            checkValues(value, english_right, english);
-            setButtons(kana_right, kana);
+            checkValues(value, english_right, english, english_count);
+            english_count++;
+            kana_count = setButtons(kana_right, kana, kana_count);
         } else {
-            checkValues(value, kana_right, kana);
-            count++;
-            setButtons(english_right, english);
+            checkValues(value, kana_right, kana, kana_count);
+            kana_count++;
+            english_count = setButtons(english_right, english, english_count);
         }
         onenglish = !onenglish;
     }
 
-    public void checkValues(int value, int[] value_right, String[] values){
+    public void checkValues(int value, int[] value_right, String[] values, int count){
         if (order[count] == buttonValues[value]) {
             value_right[order[count]] = 1;
         } else {
@@ -115,12 +117,13 @@ public class KanjiActivity extends Activity {
 
     public void onClickTextViewKanji(View view) {
         if(onenglish){
-            wrongInput(order[count], english);
-            setButtons(kana_right, kana);
+            wrongInput(order[english_count], english);
+            english_count++;
+            kana_count = setButtons(kana_right, kana, kana_count);
         } else {
-            wrongInput(order[count], kana);
-            count++;
-            setButtons(english_right, english);
+            wrongInput(order[kana_count], kana);
+            kana_count++;
+            english_count = setButtons(english_right, english, english_count);
         }
         onenglish = !onenglish;
     }
@@ -132,7 +135,7 @@ public class KanjiActivity extends Activity {
         kdd.show(getFragmentManager(), "KanaDrill Dialog");
     }
 
-    private void setButtons(int[] value_right, String[] values) {
+    private int setButtons(int[] value_right, String[] values, int count) {
 
         if (count >= upto){
             System.exit(0);
@@ -164,6 +167,8 @@ public class KanjiActivity extends Activity {
         button2.setText(values[buttonValues[1]]);
         button3.setText(values[buttonValues[2]]);
         button4.setText(values[buttonValues[3]]);
+
+        return count;
 
     }
 
