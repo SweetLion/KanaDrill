@@ -21,7 +21,7 @@
     <string name="order_title">Mostrar en orden</string>
     <string-array name="order_options">
         <item>Aleatorio</item>
-        <item>Lineal</item>
+        <item>Alfabético</item>
     </string-array>
 
 </resources>

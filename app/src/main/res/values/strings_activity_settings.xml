@@ -26,8 +26,8 @@
     
     <string name="order_title">Displaying order</string>
     <string-array name="order_options">
-        <item>Random</item>
-        <item>Linear</item>
+        <item>Randomly</item>
+        <item>Alphabetically</item>
     </string-array>
     <string-array name="order_values" translatable="false">
         <item>1</item>
