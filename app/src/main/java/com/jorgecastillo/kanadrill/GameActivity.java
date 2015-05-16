@@ -144,7 +144,7 @@ public class GameActivity extends Activity {
   public void wrongKana(int count){
     KanaDrillDialog kdd = new KanaDrillDialog();
     kdd.setTitle(getString(R.string.wrong_kana));
-    kdd.setValues(romanji[count], kana[count]);
+    kdd.setValues(romanji[count], " = " + kana[count]);
     kdd.show(getFragmentManager(), "Kana Dialog");
   }
 

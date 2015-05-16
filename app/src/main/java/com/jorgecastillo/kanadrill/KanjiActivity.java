@@ -131,7 +131,7 @@ public class KanjiActivity extends Activity {
     public void wrongInput(int count, String[] values){
         KanaDrillDialog kdd = new KanaDrillDialog();
         kdd.setTitle(getString(R.string.wrong_value));
-        kdd.setValues(kanji[count], values[count]);
+        kdd.setValues(kanji[count], "\n" + values[count]);
         kdd.show(getFragmentManager(), "KanaDrill Dialog");
     }
 
