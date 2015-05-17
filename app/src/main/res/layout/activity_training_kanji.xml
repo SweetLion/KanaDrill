@@ -34,27 +34,4 @@
         android:text="@string/blank"
         android:textSize="25sp" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/kanaText"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/nextButton"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickButtonBack"
-            android:text="@string/back_button" />
-
-        <Button
-            android:id="@+id/backButtont"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickButtonNext"
-            android:text="@string/next_button" />
-
-    </LinearLayout>
-
 </RelativeLayout>

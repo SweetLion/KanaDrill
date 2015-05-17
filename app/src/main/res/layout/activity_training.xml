@@ -24,12 +24,4 @@
         android:text="@string/blank"
         android:textSize="140sp" />
 
-    <Button
-        android:id="@+id/buttonNext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/romanjiText"
-        android:onClick="onClickButtonNext"
-        android:text="@string/next_button" />
-
 </RelativeLayout>

@@ -2,7 +2,7 @@ package com.jorgecastillo.kanadrill;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.View;
+import android.view.MotionEvent;
 import android.widget.TextView;
 
 public class KanjiTrainingActivity extends EveryActivity {
@@ -42,7 +42,7 @@ public class KanjiTrainingActivity extends EveryActivity {
 
   }
 
-  public void onClickButtonNext(View view){
+  public void rightLeftFling(){
 
     count++;
 
@@ -56,7 +56,7 @@ public class KanjiTrainingActivity extends EveryActivity {
     getActionBar().setTitle("" + (count + 1));
 
   }
-  public void onClickButtonBack(View view){
+  public void leftRightFling(){
 
     count--;
 
@@ -69,6 +69,12 @@ public class KanjiTrainingActivity extends EveryActivity {
     kanaText.setText(kana[order[count]]);
     getActionBar().setTitle("" + (count + 1));
 
+  }
+
+  @Override
+  public boolean onSingleTapUp(MotionEvent event) {
+    rightLeftFling();
+    return true;
   }
 
 }
