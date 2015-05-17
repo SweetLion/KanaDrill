@@ -17,11 +17,6 @@ public class KanaDrillDialog extends DialogFragment {
         this.second = second;
     }
 
-    public  void setFontSize(){
-        TextView textView = (TextView) getDialog().findViewById(android.R.id.message);
-        textView.setTextSize(40);
-    }
-
     public void setTitle(String title){
         this.title = title;
     }
