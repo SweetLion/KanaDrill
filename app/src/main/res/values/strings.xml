@@ -7,10 +7,15 @@
     <string name="app_name" translatable="false">KanaDrill</string>
     <string name="action_settings">Settings</string>
     <string name="blank" translatable="false" />
-    <string name="kana_button" translatable="false">Kana</string>
-    <string name="train_button">Train</string>
-    <string name="kanji_button" translatable="false">Kanji</string>
+    <string name="hiragana_drill_button">Hiragana Drill</string>
+    <string name="katakan_drill_button">Katakana Drill</string>
+    <string name="hiragana_train_button">Hiragana Training</string>
+    <string name="katakana_train_button">Katakana Training</string>
+    <string name="kanji_drill_english_button">Kanji Drill English</string>
+    <string name="kanji_drill_japanese_button">Kaji Drill Japanese</string>
+    <string name="kanji_training_button">Kanji Training</string>
     <string name="next_button">Next</string>
+    <string name="back_button">Back</string>
     <string name="wrong_kana">Wrong Kana</string>
     <string name="okay">Okay</string>
     <string name="wrong_value">Wrong Value</string>

@@ -6,8 +6,15 @@
     <string name="action_contact_title">Enviar un correo al autor</string>
     <string name="action_share">Compartir</string>
     <string name="action_settings">Configuración</string>
-    <string name="train_button">Entrenar</string>
+    <string name="hiragana_drill_button">Ejercicio Hiragana</string>
+    <string name="katakan_drill_button">Ejercicio Katakana</string>
+    <string name="hiragana_train_button">Entrenamiento Hiragana</string>
+    <string name="katakana_train_button">Entrenamiento Katakana</string>
+    <string name="kanji_drill_english_button">Ejercicio Kanji-Inglés</string>
+    <string name="kanji_drill_japanese_button">Ejercicio Kanji-Japonés</string>
+    <string name="kanji_training_button">Entrenamiento Kanji</string>
     <string name="next_button">Siguiente</string>
+    <string name="back_button">Anterior</string>
     <string name="wrong_kana">Kana Equivocado</string>
     <string name="okay">Aceptar</string>
     <string name="wrong_value">Valor Equivocado</string>

@@ -14,16 +14,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class TrainingActivity extends Activity {
+public class HiraganaTrainingActivity extends Activity {
 
   private TextView kanaText, romanjiText;
   
   private int count;
   private int upto;
-  @SuppressWarnings("unused")
-  private int wrong;
-  @SuppressWarnings("unused")
-  private int rigth;
   private int[] order;
 
   private SharedPreferences myPreferences;
@@ -31,8 +27,6 @@ public class TrainingActivity extends Activity {
 
   private String[] romanji;
   private String[] hiragana;
-  private String[] katakana;
-  private String[] kana;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +35,11 @@ public class TrainingActivity extends Activity {
     
     kanaText = (TextView) findViewById(R.id.kanaText);
     romanjiText = (TextView) findViewById(R.id.romanjiText);
-    
+
     myResources = getResources();
 
     romanji = myResources.getStringArray(R.array.romanji);
     hiragana = myResources.getStringArray(R.array.hiragana);
-    katakana = myResources.getStringArray(R.array.katakana);
-    kana = hiragana.clone();
 
     myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -55,7 +47,7 @@ public class TrainingActivity extends Activity {
 
       int kana_list =
           Integer.parseInt(myPreferences.getString("kana_list", "1"));
-  
+
       upto = CommonCode.setUpto(kana_list);
 
       order = new int[upto];
@@ -67,7 +59,7 @@ public class TrainingActivity extends Activity {
         CommonCode.orderLinear(upto, order);
       }
 
-      kanaText.setText(kana[order[count]]);
+      kanaText.setText(hiragana[order[count]]);
       romanjiText.setText(romanji[order[count]]);
 
     }
@@ -76,7 +68,6 @@ public class TrainingActivity extends Activity {
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.training, menu);
     return true;
   }
@@ -86,19 +77,10 @@ public class TrainingActivity extends Activity {
     count++;
 
       if (count >= upto) {
-        if (myPreferences.getBoolean("katakana_checkbox", true)
-            && Arrays.equals(kana, hiragana)) {
-          count = 0;
-          kana = katakana.clone();
-        } else{
           System.exit(0);
-          // The next line is to avoid an ArrayIndexOutOfBoundsException
-          count = 0;
-        }
-        
       }
 
-      kanaText.setText(kana[order[count]]);
+      kanaText.setText(hiragana[order[count]]);
       romanjiText.setText(romanji[order[count]]);
 
   }

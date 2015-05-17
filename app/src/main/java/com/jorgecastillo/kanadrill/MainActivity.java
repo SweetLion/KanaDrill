@@ -43,25 +43,47 @@ public class MainActivity extends Activity {
 		}
 		
 	}
-	
-	public void onClickButtonStart(View view) {
-		  
-		Intent intent = new Intent(this, GameActivity.class);
-		startActivity(intent);
-		
-	}
-	
-	public void onClickButtonTrain(View view){
-	  
-	  Intent intent = new Intent(this, TrainingActivity.class);
-	  startActivity(intent);
-	  
-	}
-    public void onClickButtonKanji(View view){
 
-        Intent intent = new Intent(this, KanjiActivity.class);
+    public void onClickButtonHiraganaDrill(View view){
+
+        Intent intent = new Intent(this, HiraganaDrillActivity.class);
         startActivity(intent);
+    }
 
+    public void onClickButtonKatakanaDrill(View view){
+
+        Intent intent = new Intent(this, KatakanaDrillActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickButtonHiraganaTraining(View view){
+
+        Intent intent = new Intent(this, HiraganaTrainingActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickButtonKatakanaTraining(View view){
+
+        Intent intent = new Intent(this, KatakanaTrainingActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickButtonKanjiDrillEnglish(View view){
+
+        Intent intent = new Intent(this, KanjiDrillEnglishActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickButtonKanjiDrillJapanese(View view){
+
+        Intent intent = new Intent(this, KanjiDrillJapaneseActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickButtonKanjiTraining(View view){
+
+        Intent intent = new Intent(this, KanjiTrainingActivity.class);
+        startActivity(intent);
     }
 	
 	@Override

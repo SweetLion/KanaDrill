@@ -16,17 +16,13 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 
-public class GameActivity extends Activity {
+public class HiraganaDrillActivity extends Activity {
 
   private TextView gameText;
   private Button button1, button2, button3, button4;
 	
   private int count;
   private int upto;
-  @SuppressWarnings("unused")
-  private int wrong;
-  @SuppressWarnings("unused")
-  private int rigth;
 
   private int[] order;
   private int[] buttonValues = new int[4];
@@ -37,8 +33,6 @@ public class GameActivity extends Activity {
 
   private String[] romanji;
   private String[] hiragana;
-  private String[] katakana;
-  private String[] kana;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +50,6 @@ public class GameActivity extends Activity {
 
     romanji = myResources.getStringArray(R.array.romanji);
     hiragana = myResources.getStringArray(R.array.hiragana);
-    katakana = myResources.getStringArray(R.array.katakana);
-    kana = hiragana.clone();
 
     myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -86,79 +78,35 @@ public class GameActivity extends Activity {
 
   }
 
-  public void onClickButton1(View view) {
+  public void onClickButton1(View view) { everyButton(0); }
 
-    if (order[count] == buttonValues[0]) {
-      rigth++;
-    } else {
-      wrong++;
-      wrongKana(order[count]);
-    }
+  public void onClickButton2(View view) { everyButton(1); }
 
-    count++;
-    setButtons();
+  public void onClickButton3(View view) { everyButton(2); }
 
-  }
+  public void onClickButton4(View view) { everyButton(3); }
+  
+  public void everyButton(int value){
 
-  public void onClickButton2(View view) {
-	
-    if (order[count] == buttonValues[1]) {
-      rigth++;
-    } else {
-      wrong++;
-      wrongKana(order[count]);
-    }
+      if (order[count] == buttonValues[value]) {
+      } else {
+          wrongKana(order[count]);
+      }
 
-    count++;
-    setButtons();
-
-  }
-
-  public void onClickButton3(View view) {
-
-    if (order[count] == buttonValues[2]) {
-      rigth++;
-    } else {
-      wrong++;
-      wrongKana(order[count]);
-    }
-
-    count++;
-    setButtons();
-
-  }
-
-  public void onClickButton4(View view) {
-
-    if (order[count] == buttonValues[3]) {
-      rigth++;
-    } else {
-      wrong++;
-      wrongKana(order[count]);
-    }
-
-    count++;
-    setButtons();
+      count++;
+      setButtons();
   }
 
   public void wrongKana(int count){
     KanaDrillDialog kdd = new KanaDrillDialog();
     kdd.setTitle(getString(R.string.wrong_kana));
-    kdd.setValues(romanji[count], " = " + kana[count]);
+    kdd.setValues(romanji[count], " = " + hiragana[count]);
     kdd.show(getFragmentManager(), "Kana Dialog");
   }
 
   private void setButtons() {
     if (count >= upto) {
-      if (myPreferences.getBoolean("katakana_checkbox", true)
-          && Arrays.equals(kana, hiragana)) {
-        count = 0;
-        kana = katakana.clone();
-      } else{
         System.exit(0);
-        // The next line is to avoid an ArrayIndexOutOfBoundsException
-        count = 0;
-      }
     }
 
     int replace = CommonCode.randomInt(4);
@@ -179,7 +127,7 @@ public class GameActivity extends Activity {
 
     }
 		
-    gameText.setText(kana[order[count]]);
+    gameText.setText(hiragana[order[count]]);
     button1.setText(romanji[buttonValues[0]]);
     button2.setText(romanji[buttonValues[1]]);
     button3.setText(romanji[buttonValues[2]]);
