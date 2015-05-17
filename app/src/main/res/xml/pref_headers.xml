@@ -3,7 +3,7 @@
     <!-- These settings headers are only used on tablets. -->
 
     <header
-        android:fragment="com.xm.kanadrill.SettingsActivity$GeneralPreferenceFragment"
+        android:fragment="com.jorgecastillo.kanadrill.SettingsActivity$GeneralPreferenceFragment"
         android:title="@string/pref_header_general" />
 
 </preference-headers>

@@ -13,4 +13,3 @@ public class HiraganaTrainingActivity extends TrainingActivity {
     japanese = myResources.getStringArray(R.array.hiragana);
   }
 }
-
