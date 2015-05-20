@@ -1,9 +1,7 @@
 package com.jorgecastillo.kanadrill;
 
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,8 +16,6 @@ public class DrillActivity extends EveryActivity {
 
   protected int[] order;
   private int[] buttonValues = new int[4];
-
-  protected SharedPreferences myPreferences;
   protected Resources myResources;
 
   protected String[] meaning;
@@ -40,13 +36,10 @@ public class DrillActivity extends EveryActivity {
 
     setArrays();
 
-    myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
     if (myPreferences.getBoolean("setup_true", false)) {
 
-      int kana_list =
-          Integer.parseInt(myPreferences.getString("kana_list", "1"));
-	
+      int kana_list = Integer.parseInt(myPreferences.getString("kana_list", "1"));
+
       upto = CommonCode.setUpto(kana_list);
 
       order = new int[upto];

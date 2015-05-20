@@ -80,4 +80,10 @@ public class MainActivity extends EveryActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onRestart(){
+        super.onRestart();
+        recreate();
+    }
+
 }

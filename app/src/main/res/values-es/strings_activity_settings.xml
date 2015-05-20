@@ -23,5 +23,5 @@
         <item>Aleatorio</item>
         <item>Alfabético</item>
     </string-array>
-
+    <string name="theme_title">Tema</string>
 </resources>

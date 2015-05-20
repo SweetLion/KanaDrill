@@ -9,6 +9,8 @@ import java.util.Arrays;
 
 public class CommonCode {
 
+  public static int theme_list;
+
   public static void orderLinear(int upto, int order[]) {
 
     for (int i = 0; i < upto; i++) {

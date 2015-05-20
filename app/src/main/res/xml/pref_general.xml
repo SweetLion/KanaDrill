@@ -1,11 +1,5 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="katakana_checkbox"
-        android:summary="@string/katakana_summary"
-        android:title="@string/katakana_title" />
-
     <ListPreference
         android:defaultValue="1"
         android:entries="@array/kana_options"
@@ -23,5 +17,14 @@
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
         android:title="@string/order_title" />
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/theme_options"
+        android:entryValues="@array/theme_values"
+        android:key="theme_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/theme_title" />
 
 </PreferenceScreen>

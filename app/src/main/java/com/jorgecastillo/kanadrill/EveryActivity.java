@@ -2,8 +2,10 @@ package com.jorgecastillo.kanadrill;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,10 +14,24 @@ import android.view.MotionEvent;
 public class EveryActivity extends Activity implements GestureDetector.OnGestureListener {
 
   protected GestureDetector mDetector;
+  protected SharedPreferences myPreferences;
+  public int theme_list;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
+    myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+    if (myPreferences.getBoolean("setup_true", false)) {
+      theme_list = Integer.parseInt(myPreferences.getString("theme_list", "1"));
+      CommonCode.theme_list = theme_list;
+      if (theme_list == 1) {
+        setTheme(R.style.HoloLight);
+      } else if (theme_list == 2){
+        setTheme(R.style.HoloDark);
+      }
+
+    }
     mDetector = new GestureDetector(this,this);
   }
 

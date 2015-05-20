@@ -18,6 +18,17 @@ public class SettingsActivity extends PreferenceActivity {
 	private static final boolean ALWAYS_SIMPLE_PREFS = false;
 
 	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		int theme_list = CommonCode.theme_list;
+			if (theme_list == 1) {
+				setTheme(R.style.HoloLight);
+			} else if (theme_list == 2){
+				setTheme(R.style.HoloDark);
+			}
+		super.onCreate(savedInstanceState);
+	}
+
+	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
 
@@ -120,7 +131,7 @@ public class SettingsActivity extends PreferenceActivity {
 			// guidelines.
 			bindPreferenceSummaryToValue(findPreference("kana_list"));
 			bindPreferenceSummaryToValue(findPreference("order_list"));
-			bindPreferenceSummaryToValue(findPreference("quantity_text"));
+			bindPreferenceSummaryToValue(findPreference("theme_list"));
 		}
 	}
 
