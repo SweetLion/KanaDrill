@@ -61,6 +61,12 @@ public class DrillActivity extends EveryActivity {
   public void onClickButton3(View view) { everyButton(2); }
 
   public void onClickButton4(View view) { everyButton(3); }
+
+  public void onClickGameText(View view){
+    wrongKana(order[count]);
+    count++;
+    setButtons();
+  }
   
   public void everyButton(int value){
 

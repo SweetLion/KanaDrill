@@ -70,7 +70,7 @@ public class TrainingActivity extends EveryActivity {
   public void setButtonsBack(){
     count -= 2;
     if (count < -1){
-      System.exit(0);
+      count = -1;
     }
     setButtons();
   }

@@ -50,25 +50,24 @@ public class KanjiTrainingActivity extends EveryActivity {
       System.exit(0);
     }
 
+    setButtons();
+  }
+
+  public void setButtons(){
     kanjiText.setText(kanji[order[count]]);
     englishText.setText(english[order[count]]);
     kanaText.setText(kana[order[count]]);
     getActionBar().setTitle("" + (count + 1));
-
   }
   public void leftRightFling(){
 
     count--;
 
     if (count < 0) {
-      System.exit(0);
+      count = 0;
     }
 
-    kanjiText.setText(kanji[order[count]]);
-    englishText.setText(english[order[count]]);
-    kanaText.setText(kana[order[count]]);
-    getActionBar().setTitle("" + (count + 1));
-
+    setButtons();
   }
 
   @Override

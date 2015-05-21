@@ -8,10 +8,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/kanjiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/blank"
+        android:textSize="140sp"
+        android:clickable="true"
+        android:onClick="onClickTextViewKanji" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_below="@+id/kanjiText"
+        android:paddingTop="50dp" >
 
         <LinearLayout
         android:layout_width="wrap_content"
@@ -56,16 +69,5 @@
 
     </LinearLayout>
 </LinearLayout>
-    <TextView
-        android:id="@+id/kanjiText"
-        android:layout_marginTop="100dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/blank"
-        android:textSize="140sp"
-        android:clickable="true"
-        android:onClick="onClickTextViewKanji" />
 
 </RelativeLayout>

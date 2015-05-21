@@ -35,7 +35,6 @@ public class SettingsActivity extends PreferenceActivity {
 		setupSimplePreferencesScreen();
 	}
 
-
 	@SuppressWarnings("deprecation")
 	private void setupSimplePreferencesScreen() {
 		if (!isSimplePreferences(this)) {
