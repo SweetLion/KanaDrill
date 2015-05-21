@@ -45,7 +45,9 @@ public class KanjiTrainingActivity extends EveryActivity {
   public void rightLeftFling(){
 
     count++;
-
+    if (count == 829) {
+      count = 830;
+    }
     if (count >= upto) {
       System.exit(0);
     }
@@ -54,6 +56,7 @@ public class KanjiTrainingActivity extends EveryActivity {
   }
 
   public void setButtons(){
+
     kanjiText.setText(kanji[order[count]]);
     englishText.setText(english[order[count]]);
     kanaText.setText(kana[order[count]]);
@@ -62,6 +65,9 @@ public class KanjiTrainingActivity extends EveryActivity {
   public void leftRightFling(){
 
     count--;
+    if (count == 829) {
+      count = 828;
+    }
 
     if (count < 0) {
       count = 0;

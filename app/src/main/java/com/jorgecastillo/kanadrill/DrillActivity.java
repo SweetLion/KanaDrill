@@ -2,6 +2,7 @@ package com.jorgecastillo.kanadrill;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -87,9 +88,11 @@ public class DrillActivity extends EveryActivity {
   }
 
   private void setButtons() {
+
     if (count >= upto) {
         System.exit(0);
     }
+
 
     int replace = CommonCode.randomInt(4);
     buttonValues[replace] = order[count];
@@ -99,8 +102,7 @@ public class DrillActivity extends EveryActivity {
       if(i != replace) {
         val = CommonCode.randomInt(upto);
         for (int j = 0; j < i; j++) {
-          if (val == buttonValues[j] || val == buttonValues[replace]) {
-            j = -1;
+          while (val == buttonValues[j] || val == buttonValues[replace]) {
             val = CommonCode.randomInt(upto);
           }
         }

@@ -88,6 +88,9 @@ public class KanjiDrillActivity extends EveryActivity {
 
   private int setButtons() {
 
+    if (count == 829) {
+      count = 830;
+    }
     if (count >= upto){
       System.exit(0);
     }
