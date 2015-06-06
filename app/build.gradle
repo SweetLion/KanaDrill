@@ -1,13 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.1"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "com.jorgecastillo.kanadrill"
-        minSdkVersion 16
-        targetSdkVersion 19
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 20
+        versionName "1.2.0"
     }
 
     buildTypes {
