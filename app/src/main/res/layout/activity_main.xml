@@ -13,48 +13,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hiragana_drill_button"
-        android:onClick="onClickButtonHiraganaDrill" />
+        android:onClick="onClickButtonHiraganaDrill"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_holo" />
 
     <Button
         android:id="@+id/buttonKatakanaDrill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/katakan_drill_button"
-        android:onClick="onClickButtonKatakanaDrill" />
+        android:onClick="onClickButtonKatakanaDrill"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_holo" />
 
     <Button
         android:id="@+id/buttonHiraganaTraining"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hiragana_train_button"
-        android:onClick="onClickButtonHiraganaTraining" />
+        android:onClick="onClickButtonHiraganaTraining"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_holo" />
 
     <Button
         android:id="@+id/buttonKatakanaTraining"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/katakana_train_button"
-        android:onClick="onClickButtonKatakanaTraining" />
+        android:onClick="onClickButtonKatakanaTraining"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_holo" />
 
     <Button
         android:id="@+id/buttonKanjiDrillEnglish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/kanji_drill_english_button"
-        android:onClick="onClickButtonKanjiDrillEnglish" />
+        android:onClick="onClickButtonKanjiDrillEnglish"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_holo" />
 
     <Button
         android:id="@+id/buttonKanjiDrillJapanese"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/kanji_drill_japanese_button"
-        android:onClick="onClickButtonKanjiDrillJapanese" />
+        android:onClick="onClickButtonKanjiDrillJapanese"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_holo" />
 
     <Button
         android:id="@+id/buttonKanjiTraining"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/kanji_training_button"
-        android:onClick="onClickButtonKanjiTraining" />
+        android:onClick="onClickButtonKanjiTraining"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_holo" />
     
 </LinearLayout>

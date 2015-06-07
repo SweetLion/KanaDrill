@@ -2,10 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="4.5dp"
     android:orientation="vertical" >
 
     <TextView
@@ -14,7 +11,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/blank"
         android:textSize="140sp"
         android:clickable="true"
         android:onClick="onClickTextViewKanji" />
@@ -37,14 +33,18 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:onClick="onClickButton1"
-            android:text="@string/blank" />
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/button_holo" />
 
         <Button
             android:id="@+id/buttonkanji2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:onClick="onClickButton2"
-            android:text="@string/blank" />
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/button_holo" />
 
     </LinearLayout>
 
@@ -58,14 +58,18 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:onClick="onClickButton3"
-            android:text="@string/blank" />
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/button_holo" />
 
         <Button
             android:id="@+id/buttonkanji4"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:onClick="onClickButton4"
-            android:text="@string/blank" />
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/button_holo" />
 
     </LinearLayout>
 </LinearLayout>

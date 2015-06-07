@@ -38,6 +38,7 @@ public class KanjiDrillActivity extends EveryActivity {
     button2 = (Button) findViewById(R.id.buttonkanji2);
     button3 = (Button) findViewById(R.id.buttonkanji3);
     button4 = (Button) findViewById(R.id.buttonkanji4);
+
     CommonCode.orderLinear(upto, order);
     setButtons();
 

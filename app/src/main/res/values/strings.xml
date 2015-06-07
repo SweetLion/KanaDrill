@@ -6,7 +6,6 @@
     <string name="action_share">Share</string>
     <string name="app_name" translatable="false">KanaDrill</string>
     <string name="action_settings">Settings</string>
-    <string name="blank" translatable="false" />
     <string name="hiragana_drill_button">Hiragana Drill</string>
     <string name="katakan_drill_button">Katakana Drill</string>
     <string name="hiragana_train_button">Hiragana Training</string>
